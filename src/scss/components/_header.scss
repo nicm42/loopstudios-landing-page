@@ -19,7 +19,9 @@
   }
 
   &__nav {
-    transform: translateX(100%);
+    position: absolute;
+    transform: translateX(1000%);
+    transition: transform 500ms ease-in-out;
 
     &.open {
       transform: translateX(0);
