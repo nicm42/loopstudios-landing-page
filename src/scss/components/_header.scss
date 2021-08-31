@@ -19,7 +19,11 @@
   }
 
   &__nav {
-    display: none;
+    transform: translateX(100%);
+
+    &.open {
+      transform: translateX(0);
+    }
   }
 
   &__list {
