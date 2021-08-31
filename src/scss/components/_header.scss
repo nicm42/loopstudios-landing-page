@@ -1,12 +1,22 @@
 .header {
   display: grid;
-  place-content: center;
+  grid-template-rows: auto 1fr;
   height: 100vh;
-  padding-inline: 1.5em;
+  padding: 2.5em 1.5em;
   background-image: url(../../../public/image-hero-mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   color: var(--white);
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    background-color: transparent;
+    border: none;
+  }
 
   &__nav {
     display: none;
@@ -20,6 +30,7 @@
   }
 
   &__title {
+    place-self: center;
     padding: 0.76em;
     border: 2px solid var(--white);
     font-family: var(--fontFamilyHeaders);
