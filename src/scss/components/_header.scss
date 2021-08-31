@@ -13,13 +13,30 @@
     justify-content: space-between;
   }
 
+  &__logo {
+    z-index: 1;
+  }
+
   &__menu {
     background-color: transparent;
     border: none;
+    z-index: 1;
   }
 
   &__nav {
     position: absolute;
+    display: grid;
+    align-content: center;
+    width: 100vw;
+    height: 100vh;
+    // Hack so it ignores the padding
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    background-color: var(--black);
+    font-family: var(--fontFamilyHeaders);
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
     transform: translateX(1000%);
     transition: transform 500ms ease-in-out;
 
@@ -29,10 +46,11 @@
   }
 
   &__list {
+    list-style-type: none;
   }
 
   &__item {
-    display: inline;
+    //display: inline;
   }
 
   &__title {

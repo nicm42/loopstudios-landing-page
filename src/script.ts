@@ -6,7 +6,7 @@ const buttonImage = document.querySelector(
 
 menu.addEventListener('click', () => {
   nav.classList.toggle('open');
-  if (menu.classList.contains('open')) {
+  if (nav.classList.contains('open')) {
     buttonImage.src = 'public/icon-close.svg';
   } else {
     buttonImage.src = 'public/icon-hamburger.svg';
