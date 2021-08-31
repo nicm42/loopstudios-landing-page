@@ -1,3 +1,5 @@
-html {
-  background-color: aliceblue;
-}
+@use 'scss/general/reset';
+@use 'scss/general/globals';
+@use 'scss/general/index';
+
+@use 'scss/components/header';
