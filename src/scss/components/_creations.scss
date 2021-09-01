@@ -26,47 +26,64 @@
     grid-template-rows: repeat(8, 7.5em);
     gap: 1.5em;
     justify-content: center;
+    margin-block-start: 3em;
   }
 
   &__item {
+    display: grid;
     padding-inline-start: 0.85em;
-    font-family: var(--fontFamilyHeaders);
-    font-size: 1.5rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    color: var(--white);
+    padding-block-end: 0.85em;
     background-size: cover;
 
     &.deep-earth {
-      background-image: url(../../../public/image-deep-earth-mobile.jpg);
+      background-image: var(--background-gradient),
+        url(../../../public/image-deep-earth-mobile.jpg);
     }
 
     &.night-arcade {
-      background-image: url(../../../public/image-night-arcade-mobile.jpg);
+      background-image: var(--background-gradient),
+        url(../../../public/image-night-arcade-mobile.jpg);
     }
 
     &.soccer-vr {
-      background-image: url(../../../public/image-soccer-team-mobile.jpg);
+      background-image: var(--background-gradient),
+        url(../../../public/image-soccer-team-mobile.jpg);
     }
 
     &.the-grid {
-      background-image: url(../../../public/image-grid-mobile.jpg);
+      background-image: var(--background-gradient),
+        url(../../../public/image-grid-mobile.jpg);
     }
 
     &.up-above {
-      background-image: url(../../../public/image-from-above-mobile.jpg);
+      background-image: var(--background-gradient),
+        url(../../../public/image-from-above-mobile.jpg);
     }
 
     &.pocket-borealis {
-      background-image: url(../../../public/image-pocket-borealis-mobile.jpg);
+      background-image: var(--background-gradient),
+        url(../../../public/image-pocket-borealis-mobile.jpg);
     }
 
     &.curiosity {
-      background-image: url(../../../public/image-curiosity-mobile.jpg);
+      background-image: var(--background-gradient),
+        url(../../../public/image-curiosity-mobile.jpg);
     }
 
     &.fisheye {
-      background-image: url(../../../public/image-fisheye-mobile.jpg);
+      background-image: var(--background-gradient),
+        url(../../../public/image-fisheye-mobile.jpg);
     }
+  }
+
+  &__text {
+    align-self: end;
+    max-width: 8ch;
+    font-family: var(--fontFamilyHeaders);
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--white);
   }
 }
