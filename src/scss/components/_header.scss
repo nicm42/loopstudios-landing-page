@@ -17,10 +17,16 @@
   &__top {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__logo {
+    height: 1.5rem;
     z-index: 1;
+
+    @include g.breakpoint-up(medium) {
+      height: 2rem;
+    }
   }
 
   &__menu {
@@ -34,7 +40,7 @@
   }
 
   &__nav {
-    @include g.breakpoint-down(medium) {
+    @include g.breakpoint-down(large) {
       position: absolute;
       display: grid;
       align-content: center;
@@ -84,6 +90,7 @@
     line-height: 0.95;
 
     @include g.breakpoint-up(medium) {
+      padding: 0.55em;
       font-size: 4.5rem;
     }
   }
