@@ -20,6 +20,8 @@
   }
 
   &__all {
+    order: 3;
+    margin-block-start: 2em;
     padding: 0.93em 3.075em;
     border: 1px solid var(--black);
     font-size: 0.875rem;
