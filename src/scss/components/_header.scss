@@ -1,3 +1,5 @@
+@use '../general' as g;
+
 .header {
   display: grid;
   grid-template-rows: auto 1fr;
@@ -7,6 +9,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   color: var(--white);
+
+  @include g.breakpoint-up(medium) {
+    padding: 4em 10em;
+  }
 
   &__top {
     display: flex;
@@ -21,27 +27,33 @@
     background-color: transparent;
     border: none;
     z-index: 1;
+
+    @include g.breakpoint-up(medium) {
+      display: none;
+    }
   }
 
   &__nav {
-    position: absolute;
-    display: grid;
-    align-content: center;
-    width: 100vw;
-    height: 100vh;
-    // Hack so it ignores the padding
-    inset-block-start: 0;
-    inset-inline-start: 0;
-    background-color: var(--black);
-    font-family: var(--fontFamilyHeaders);
-    font-size: 1.5rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    transform: translateX(1000%);
-    transition: transform 500ms ease-in-out;
+    @include g.breakpoint-down(medium) {
+      position: absolute;
+      display: grid;
+      align-content: center;
+      width: 100vw;
+      height: 100vh;
+      // Hack so it ignores the padding
+      inset-block-start: 0;
+      inset-inline-start: 0;
+      background-color: var(--black);
+      font-family: var(--fontFamilyHeaders);
+      font-size: 1.5rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      transform: translateX(1000%);
+      transition: transform 500ms ease-in-out;
 
-    &.open {
-      transform: translateX(0);
+      &.open {
+        transform: translateX(0);
+      }
     }
   }
 
@@ -50,8 +62,15 @@
   }
 
   &__item {
-    //display: inline;
     line-height: 2;
+
+    @include g.breakpoint-up(medium) {
+      display: inline;
+
+      &:not(:last-of-type) {
+        margin-inline-end: 2em;
+      }
+    }
   }
 
   &__title {
@@ -63,5 +82,9 @@
     font-weight: 300;
     text-transform: uppercase;
     line-height: 0.95;
+
+    @include g.breakpoint-up(medium) {
+      font-size: 4.5rem;
+    }
   }
 }
