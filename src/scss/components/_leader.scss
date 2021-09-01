@@ -1,0 +1,28 @@
+@use '../general' as g;
+
+.leader {
+  margin-block-start: 6em;
+  text-align: center;
+
+  &__image {
+    padding-inline: 1.5em;
+    margin-block-end: 3em;
+  }
+
+  &__text {
+    padding-inline: 3em;
+  }
+
+  &__title {
+    font-family: var(--fontFamilyHeaders);
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  &__paragraph {
+    margin-block-start: 1em;
+    color: var(--veryDarkGrey);
+  }
+}
