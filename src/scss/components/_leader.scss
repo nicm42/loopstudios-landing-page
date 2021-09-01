@@ -4,6 +4,11 @@
   margin-block-start: 6em;
   text-align: center;
 
+  @include g.breakpoint-up(medium) {
+    display: flex;
+    align-items: end;
+  }
+
   &__image {
     padding-inline: 1.5em;
     margin-block-end: 3em;
@@ -11,6 +16,10 @@
 
   &__text {
     padding-inline: 3em;
+
+    @include g.breakpoint-up(medium) {
+      padding: 6em;
+    }
   }
 
   &__title {
@@ -19,10 +28,18 @@
     font-weight: 300;
     line-height: 1;
     text-transform: uppercase;
+
+    @include g.breakpoint-up(medium) {
+      font-size: 3em;
+    }
   }
 
   &__paragraph {
     margin-block-start: 1em;
     color: var(--veryDarkGrey);
+
+    @include g.breakpoint-up(medium) {
+      text-align: start;
+    }
   }
 }
