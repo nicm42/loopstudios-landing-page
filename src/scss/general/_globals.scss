@@ -1,3 +1,5 @@
+@use 'mixins';
+
 html {
   font-size: 100%;
   overflow-x: hidden;
@@ -35,5 +37,17 @@ a {
   &:hover::after,
   &:focus::after {
     transform: translateX(50%) scaleX(50%);
+  }
+}
+
+.mobile-image {
+  @include mixins.breakpoint-up(medium) {
+    display: none;
+  }
+}
+
+.desktop-image {
+  @include mixins.breakpoint-down(medium) {
+    display: none;
   }
 }
