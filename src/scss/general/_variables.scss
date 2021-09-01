@@ -4,6 +4,7 @@
   --black: hsl(0, 0%, 0%);
   --darkGrey: hsl(0, 0%, 55%);
   --veryDarkGrey: hsl(0, 0%, 41%);
+  --lightGrey: hsl(0, 0%, 45%);
 
   // Typography
   --fontFamilyHeaders: 'Josefin Sans', sans-serif;
@@ -12,4 +13,11 @@
   /* //Padding
   --padding-mobile-block: 2.5em;
   --padding-mobile-inline: 1.5em; */
+
+  // Gradient on grid of images
+  --background-gradient: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.5) 10%,
+    rgba(0, 0, 0, 0)
+  );
 }
