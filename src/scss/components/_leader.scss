@@ -6,19 +6,29 @@
 
   @include g.breakpoint-up(medium) {
     display: flex;
-    align-items: end;
+    justify-content: center;
+    align-items: flex-end;
   }
 
   &__image {
     padding-inline: 1.5em;
     margin-block-end: 3em;
+
+    @include g.breakpoint-up(medium) {
+      margin-block-end: 0;
+    }
   }
 
   &__text {
     padding-inline: 3em;
+    background-color: var(--white);
 
     @include g.breakpoint-up(medium) {
-      padding: 6em;
+      padding-block-start: 6em;
+      padding-inline: 6em 0;
+      max-width: 36em;
+      text-align: start;
+      transform: translateX(-12em);
     }
   }
 
@@ -37,9 +47,5 @@
   &__paragraph {
     margin-block-start: 1em;
     color: var(--veryDarkGrey);
-
-    @include g.breakpoint-up(medium) {
-      text-align: start;
-    }
   }
 }
