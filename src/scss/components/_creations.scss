@@ -44,6 +44,12 @@
     gap: 1.5em;
     justify-content: center;
     margin-block-start: 3em;
+
+    @include g.breakpoint-up(medium) {
+      grid-template-columns: repeat(4, 17em);
+      grid-template-rows: repeat(2, 30em);
+      gap: 2em;
+    }
   }
 
   &__item {
@@ -65,7 +71,7 @@
       position: absolute;
       content: '';
       inset: 0;
-      background-color: none;
+      background-color: transparent;
       background-image: var(--background-gradient);
       transition: background 250ms linear;
     }
@@ -78,35 +84,66 @@
 
     &.deep-earth {
       background-image: url(../../../public/image-deep-earth-mobile.jpg);
+
+      @include g.breakpoint-up(medium) {
+        background-image: url(../../../public/image-deep-earth-desktop.jpg);
+      }
     }
 
     &.night-arcade {
       background-image: url(../../../public/image-night-arcade-mobile.jpg);
+
+      @include g.breakpoint-up(medium) {
+        background-image: url(../../../public/image-night-arcade-desktop.jpg);
+      }
     }
 
     &.soccer-vr {
       background-image: url(../../../public/image-soccer-team-mobile.jpg);
+
+      @include g.breakpoint-up(medium) {
+        background-image: url(../../../public/image-soccer-team-desktop.jpg);
+      }
     }
 
     &.the-grid {
-      background-image: var(--background-gradient),
-        url(../../../public/image-grid-mobile.jpg);
+      background-image: url(../../../public/image-grid-mobile.jpg);
+
+      @include g.breakpoint-up(medium) {
+        background-image: url(../../../public/image-grid-desktop.jpg);
+      }
     }
 
     &.up-above {
       background-image: url(../../../public/image-from-above-mobile.jpg);
+
+      @include g.breakpoint-up(medium) {
+        background-image: url(../../../public/image-from-above-desktop.jpg);
+      }
     }
 
     &.pocket-borealis {
       background-image: url(../../../public/image-pocket-borealis-mobile.jpg);
+
+      @include g.breakpoint-up(medium) {
+        background-image: url(../../../public/image-pocket-borealis-desktop.jpg);
+      }
     }
 
     &.curiosity {
       background-image: url(../../../public/image-curiosity-mobile.jpg);
+
+      @include g.breakpoint-up(medium) {
+        background-image: url(../../../public/image-curiosity-desktop.jpg);
+      }
     }
 
     &.fisheye {
       background-image: url(../../../public/image-fisheye-mobile.jpg);
+
+      @include g.breakpoint-up(medium) {
+        background-image: url(../../../public/image-fisheye-desktop.jpg);
+      }
     }
   }
 
