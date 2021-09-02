@@ -38,6 +38,10 @@ a {
   &:focus::after {
     transform: translateX(50%) scaleX(50%);
   }
+
+  ul {
+    list-style-type: none;
+  }
 }
 
 .mobile-image {

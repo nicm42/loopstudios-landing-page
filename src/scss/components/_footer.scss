@@ -1,0 +1,26 @@
+@use '../general' as g;
+
+.footer {
+  background-color: var(--black);
+  text-align: center;
+
+  &__logo {
+  }
+
+  &__links {
+  }
+
+  &__link {
+  }
+
+  &__socials {
+  }
+
+  &__social {
+    display: inline-block;
+  }
+
+  &__copyright {
+    color: var(--darkGrey);
+  }
+}
