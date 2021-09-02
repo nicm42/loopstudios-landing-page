@@ -5,10 +5,15 @@
   text-align: center;
 
   @include g.breakpoint-up(medium) {
-    padding: var(--padding-desktop-inline);
+    //Only putting padding on start here so it doesn't cut off the text
+    padding-inline-start: var(--padding-desktop-inline);
     display: flex;
     justify-content: center;
     align-items: flex-end;
+
+    @include g.breakpoint-up(medium) {
+      justify-content: flex-start;
+    }
   }
 
   &__image {
@@ -16,6 +21,7 @@
     margin-block-end: 3em;
 
     @include g.breakpoint-up(medium) {
+      padding-inline: 0;
       margin-block-end: 0;
     }
   }
@@ -29,7 +35,7 @@
       padding-inline: 6em 0;
       max-width: 36em;
       text-align: start;
-      transform: translateX(-12em);
+      transform: translateX(-10em);
     }
   }
 
