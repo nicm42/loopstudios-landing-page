@@ -11,7 +11,7 @@
   color: var(--white);
 
   @include g.breakpoint-up(medium) {
-    padding: 4em 10em;
+    padding: 4em var(--padding-desktop-inline);
   }
 
   &__top {
