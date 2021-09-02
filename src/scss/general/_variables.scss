@@ -4,7 +4,6 @@
   --black: hsl(0, 0%, 0%);
   --darkGrey: hsl(0, 0%, 55%);
   --veryDarkGrey: hsl(0, 0%, 41%);
-  --lightGrey: hsl(0, 0%, 45%);
 
   // Typography
   --fontFamilyHeaders: 'Josefin Sans', sans-serif;
@@ -17,7 +16,7 @@
   // Gradient on grid of images
   --background-gradient: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.5) 10%,
+    rgba(0, 0, 0, 0.25) 10%,
     rgba(0, 0, 0, 0)
   );
 }

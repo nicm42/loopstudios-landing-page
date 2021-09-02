@@ -28,7 +28,7 @@
     letter-spacing: 0.3125rem;
     text-transform: uppercase;
     color: var(--black);
-    transition: background-color 250ms linear, color 250ms linear;
+    transition: background 250ms linear, color 250ms linear;
 
     &:focus,
     &:hover {
@@ -47,24 +47,45 @@
   }
 
   &__item {
+    position: relative;
     display: grid;
     padding-inline-start: 0.85em;
     padding-block-end: 0.85em;
     background-size: cover;
+    background-repeat: no-repeat;
+
+    &:hover,
+    &:focus {
+      .creations__text {
+        color: var(--black);
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      inset: 0;
+      background-color: none;
+      background-image: var(--background-gradient);
+      transition: background 250ms linear;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      background-color: rgba(255, 255, 255, 0.5);
+      background-image: none;
+    }
 
     &.deep-earth {
-      background-image: var(--background-gradient),
-        url(../../../public/image-deep-earth-mobile.jpg);
+      background-image: url(../../../public/image-deep-earth-mobile.jpg);
     }
 
     &.night-arcade {
-      background-image: var(--background-gradient),
-        url(../../../public/image-night-arcade-mobile.jpg);
+      background-image: url(../../../public/image-night-arcade-mobile.jpg);
     }
 
     &.soccer-vr {
-      background-image: var(--background-gradient),
-        url(../../../public/image-soccer-team-mobile.jpg);
+      background-image: url(../../../public/image-soccer-team-mobile.jpg);
     }
 
     &.the-grid {
@@ -73,23 +94,19 @@
     }
 
     &.up-above {
-      background-image: var(--background-gradient),
-        url(../../../public/image-from-above-mobile.jpg);
+      background-image: url(../../../public/image-from-above-mobile.jpg);
     }
 
     &.pocket-borealis {
-      background-image: var(--background-gradient),
-        url(../../../public/image-pocket-borealis-mobile.jpg);
+      background-image: url(../../../public/image-pocket-borealis-mobile.jpg);
     }
 
     &.curiosity {
-      background-image: var(--background-gradient),
-        url(../../../public/image-curiosity-mobile.jpg);
+      background-image: url(../../../public/image-curiosity-mobile.jpg);
     }
 
     &.fisheye {
-      background-image: var(--background-gradient),
-        url(../../../public/image-fisheye-mobile.jpg);
+      background-image: url(../../../public/image-fisheye-mobile.jpg);
     }
   }
 
@@ -102,5 +119,7 @@
     line-height: 1;
     text-transform: uppercase;
     color: var(--white);
+    transition: color 250ms linear;
+    z-index: 1; // so it's above the before
   }
 }
