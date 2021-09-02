@@ -6,6 +6,10 @@
   flex-direction: column;
   align-items: center;
 
+  @include g.breakpoint-up(medium) {
+    padding: var(--padding-desktop-inline);
+  }
+
   &__title {
     font-family: var(--fontFamilyHeaders);
     font-size: 2rem;
@@ -43,7 +47,7 @@
     grid-template-rows: repeat(8, 7.5em);
     gap: 1.5em;
     justify-content: center;
-    margin-block-start: 3em;
+    margin-block: 3em;
 
     @include g.breakpoint-up(medium) {
       grid-template-columns: repeat(4, 17em);
@@ -55,10 +59,15 @@
   &__item {
     position: relative;
     display: grid;
-    padding-inline-start: 0.85em;
-    padding-block-end: 0.85em;
+    padding-inline: 0.85em;
+    padding-block: 0.85em;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @include g.breakpoint-up(medium) {
+      padding-inline: 2.5em;
+      padding-block: 2em;
+    }
 
     &:hover,
     &:focus {
@@ -72,13 +81,17 @@
       content: '';
       inset: 0;
       background-color: transparent;
-      background-image: var(--background-gradient);
+      background-image: var(--background-gradient-mobile);
       transition: background 250ms linear;
+
+      @include g.breakpoint-up(medium) {
+        background-image: var(--background-gradient-desktop);
+      }
     }
 
     &:hover::before,
     &:focus::before {
-      background-color: rgba(255, 255, 255, 0.5);
+      background-color: rgba(255, 255, 255, 0.75);
       background-image: none;
     }
 
@@ -158,5 +171,9 @@
     color: var(--white);
     transition: color 250ms linear;
     z-index: 1; // so it's above the before
+
+    @include g.breakpoint-up(medium) {
+      font-size: 2rem;
+    }
   }
 }

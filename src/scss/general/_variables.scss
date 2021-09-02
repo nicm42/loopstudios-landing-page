@@ -9,14 +9,20 @@
   --fontFamilyHeaders: 'Josefin Sans', sans-serif;
   --fontFamilyParas: 'Alata', sans-serif;
 
-  /* //Padding
-  --padding-mobile-block: 2.5em;
-  --padding-mobile-inline: 1.5em; */
+  //Padding
+  //--padding-mobile-block: 2.5em;
+  //--padding-mobile-inline: 1.5em;
+  --padding-desktop-inline: 10em;
 
   // Gradient on grid of images
-  --background-gradient: linear-gradient(
+  --background-gradient-mobile: linear-gradient(
     to right,
     rgba(0, 0, 0, 0.25) 10%,
     rgba(0, 0, 0, 0)
+  );
+  --background-gradient-desktop: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 30%,
+    rgba(0, 0, 0, 0.75)
   );
 }
