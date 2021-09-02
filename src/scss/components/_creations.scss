@@ -28,6 +28,13 @@
     letter-spacing: 0.3125rem;
     text-transform: uppercase;
     color: var(--black);
+    transition: background-color 250ms linear, color 250ms linear;
+
+    &:focus,
+    &:hover {
+      background-color: var(--black);
+      color: var(--white);
+    }
   }
 
   &__grid {
