@@ -63,6 +63,11 @@
     }
   }
 
+  &__list {
+    list-style-type: none;
+    padding-inline-start: 1em;
+  }
+
   &__item {
     line-height: 2;
 
