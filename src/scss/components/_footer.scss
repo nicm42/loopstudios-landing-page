@@ -2,31 +2,67 @@
 
 .footer {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-areas: 'logo' 'links' 'socials' 'copyright';
   justify-items: center;
   margin-block-start: 6em;
   padding: 3.5em 3.25em;
   background-color: var(--black);
 
+  @include g.breakpoint-up(medium) {
+    grid-template-areas:
+      'logo socials'
+      'links copyright';
+    gap: 1.5em;
+    padding-inline: var(--padding-desktop-inline);
+  }
+
   &__logo {
+    grid-area: logo;
     height: 1.5rem;
+
+    @include g.breakpoint-up(medium) {
+      justify-self: start;
+    }
   }
 
   &__links {
+    grid-area: links;
     margin-block-end: 0;
     margin-block-start: 2em;
     padding: 0;
     text-align: center;
+
+    @include g.breakpoint-up(medium) {
+      margin-block-start: 0;
+      justify-self: start;
+    }
+  }
+
+  &__link {
+    @include g.breakpoint-up(medium) {
+      display: inline;
+    }
   }
 
   &__link:not(:first-of-type) {
     margin-block-start: 1em;
+
+    @include g.breakpoint-up(medium) {
+      margin-block-start: 0;
+      margin-inline-start: 2em;
+    }
   }
 
   &__socials {
+    grid-area: socials;
     margin: 0;
     margin-block-start: 3em;
     padding: 0;
+
+    @include g.breakpoint-up(medium) {
+      margin-block-start: 0;
+      justify-self: end;
+    }
   }
 
   &__social {
@@ -56,7 +92,13 @@
   }
 
   &__copyright {
+    grid-area: copyright;
     margin-block-start: 1em;
     color: var(--darkGrey);
+
+    @include g.breakpoint-up(medium) {
+      margin-block-start: 0;
+      justify-self: end;
+    }
   }
 }
