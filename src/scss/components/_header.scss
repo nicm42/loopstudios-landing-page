@@ -108,5 +108,11 @@
       padding: 0.55em;
       font-size: 4.5rem;
     }
+
+    @include g.breakpoint-down(small) {
+      // Make the font smaller on a really small screen
+      // so that the longest word doesn't mean it all goes off screen
+      font-size: 2rem;
+    }
   }
 }

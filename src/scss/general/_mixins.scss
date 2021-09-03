@@ -8,6 +8,8 @@ $breakpoints-up: (
 );
 
 $breakpoints-down: (
+  // 375px
+  'small': '23em',
   // 800px
   'medium': '50em'
 );

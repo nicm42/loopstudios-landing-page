@@ -34,7 +34,7 @@
   }
 
   &__text {
-    padding-inline: 3em;
+    padding-inline: var(--padding-mobile-inline);
     background-color: var(--white);
     max-width: 60ch;
 

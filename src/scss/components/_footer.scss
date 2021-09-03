@@ -99,6 +99,7 @@
     grid-area: copyright;
     margin-block-start: 1em;
     color: var(--darkGrey);
+    text-align: center;
 
     @include g.breakpoint-up(medium) {
       margin-block-start: 0;
