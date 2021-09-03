@@ -9,7 +9,7 @@
     'images'
     'button';
   place-content: center;
-  justify-items: center;
+  place-items: center;
   gap: 2em;
 
   @include g.breakpoint-up(medium) {
@@ -50,8 +50,10 @@
     transition: background 250ms linear, color 250ms linear;
 
     @include g.breakpoint-up(medium) {
+      padding: 0.93em 1.25em;
       justify-self: end;
     }
+
     &:focus,
     &:hover {
       background-color: var(--black);
