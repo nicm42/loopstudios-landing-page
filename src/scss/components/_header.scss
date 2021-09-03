@@ -34,17 +34,19 @@
   }
 
   &__menu {
-    background-color: transparent;
-    border: none;
-    z-index: 1;
+    display: none;
 
-    @include g.breakpoint-up(medium) {
-      display: none;
+    @include g.breakpoint-down(medium) {
+      display: block;
+      background-color: transparent;
+      border: none;
+      z-index: 1;
     }
   }
 
+  // Menu is desktop first, as otherwise I'd have to unset all of this
   &__nav {
-    @include g.breakpoint-down(large) {
+    @include g.breakpoint-down(medium) {
       position: absolute;
       display: grid;
       align-content: center;
@@ -73,13 +75,16 @@
   }
 
   &__item {
+    display: inline;
     line-height: 2;
 
-    @include g.breakpoint-up(medium) {
-      display: inline;
+    &:not(:last-of-type) {
+      margin-inline-end: 2em;
+    }
 
+    @include g.breakpoint-down(medium) {
       &:not(:last-of-type) {
-        margin-inline-end: 2em;
+        margin-inline-end: 0;
       }
     }
   }
