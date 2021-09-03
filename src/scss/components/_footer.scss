@@ -30,7 +30,25 @@
   }
 
   &__social {
+    position: relative;
     display: inline-block;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 0.1em;
+      inset: 0;
+      inset-block-start: 2.125em;
+      background-color: var(--white);
+      transform: scaleX(0);
+      transition: transform 500ms ease-in-out;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      transform: scaleX(100%);
+    }
   }
 
   &__social:not(:first-of-type) {
