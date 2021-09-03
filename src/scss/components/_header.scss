@@ -4,14 +4,18 @@
   display: grid;
   grid-template-rows: auto 1fr;
   height: 100vh;
-  padding: 2.5em 1.5em;
+  padding: 2.5em var(--padding-mobile-inline);
   background-image: url(../../../public/image-hero-mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   color: var(--white);
 
   @include g.breakpoint-up(medium) {
-    padding: 4em var(--padding-desktop-inline);
+    padding: 4em var(--padding-tablet-inline);
+  }
+
+  @include g.breakpoint-up(large) {
+    padding-inline: var(--padding-desktop-inline);
   }
 
   &__top {

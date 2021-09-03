@@ -2,6 +2,7 @@
 
 .creations {
   margin-block-start: 6em;
+  padding-inline: var(--padding-mobile-inline);
   display: grid;
   grid-template-areas:
     'title'
@@ -12,11 +13,15 @@
   gap: 2em;
 
   @include g.breakpoint-up(medium) {
-    padding: var(--padding-desktop-inline);
+    padding-inline: var(--padding-tablet-inline);
     grid-template-areas:
       'title button'
       'images images';
     gap: 5em;
+  }
+
+  @include g.breakpoint-up(medium) {
+    padding-inline: var(--padding-desktop-inline);
   }
 
   &__title {
@@ -64,9 +69,14 @@
     //margin-block: 3em;
 
     @include g.breakpoint-up(medium) {
+      grid-template-columns: repeat(2, 17em);
+      grid-template-rows: repeat(4, 30em);
+      gap: 2em;
+    }
+
+    @include g.breakpoint-up(large) {
       grid-template-columns: repeat(4, 17em);
       grid-template-rows: repeat(2, 30em);
-      gap: 2em;
     }
   }
 

@@ -13,6 +13,10 @@
       'logo socials'
       'links copyright';
     gap: 1.5em;
+    padding-inline: var(--padding-tablet-inline);
+  }
+
+  @include g.breakpoint-up(large) {
     padding-inline: var(--padding-desktop-inline);
   }
 
