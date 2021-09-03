@@ -1,0 +1,10 @@
+.skip-link {
+  position: absolute;
+  inset-block-start: 1em;
+  inset-inline-start: 1em;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
