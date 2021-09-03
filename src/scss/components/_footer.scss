@@ -9,14 +9,14 @@
   background-color: var(--black);
 
   @include g.breakpoint-up(medium) {
-    grid-template-areas:
-      'logo socials'
-      'links copyright';
-    gap: 1.5em;
     padding-inline: var(--padding-tablet-inline);
   }
 
   @include g.breakpoint-up(large) {
+    grid-template-areas:
+      'logo socials'
+      'links copyright';
+    gap: 1.5em;
     padding-inline: var(--padding-desktop-inline);
   }
 
@@ -24,7 +24,7 @@
     grid-area: logo;
     height: 1.5rem;
 
-    @include g.breakpoint-up(medium) {
+    @include g.breakpoint-up(large) {
       justify-self: start;
     }
   }
@@ -36,14 +36,14 @@
     padding: 0;
     text-align: center;
 
-    @include g.breakpoint-up(medium) {
+    @include g.breakpoint-up(large) {
       margin-block-start: 0;
       justify-self: start;
     }
   }
 
   &__link {
-    @include g.breakpoint-up(medium) {
+    @include g.breakpoint-up(large) {
       display: inline;
     }
   }
@@ -51,7 +51,7 @@
   &__link:not(:first-of-type) {
     margin-block-start: 1em;
 
-    @include g.breakpoint-up(medium) {
+    @include g.breakpoint-up(large) {
       margin-block-start: 0;
       margin-inline-start: 2em;
     }
@@ -63,7 +63,7 @@
     margin-block-start: 3em;
     padding: 0;
 
-    @include g.breakpoint-up(medium) {
+    @include g.breakpoint-up(large) {
       margin-block-start: 0;
       justify-self: end;
     }
@@ -101,7 +101,7 @@
     color: var(--darkGrey);
     text-align: center;
 
-    @include g.breakpoint-up(medium) {
+    @include g.breakpoint-up(large) {
       margin-block-start: 0;
       justify-self: end;
     }
