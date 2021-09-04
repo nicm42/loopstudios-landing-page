@@ -2,6 +2,11 @@
 
 .leader {
   margin-block-start: 6em;
+  //padding-inline: var(--padding-mobile-inline);
+  // For some reason iOS ignores the padding-online on this section only
+  // So have to do this the old-fashioned way
+  padding-left: var(--padding-mobile-inline);
+  padding-right: var(--padding-mobile-inline);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,11 +14,19 @@
   text-align: center;
 
   @include g.breakpoint-up(medium) {
-    padding-inline: var(--padding-tablet-inline);
+    //padding-inline: var(--padding-tablet-inline);
+    // For some reason iOS ignores the padding-online on this section only
+    // So have to do this the old-fashioned way
+    padding-left: var(--padding-tablet-inline);
+    padding-right: var(--padding-tablet-inline);
   }
 
   @include g.breakpoint-up(large) {
-    padding-inline: var(--padding-desktop-inline);
+    //padding-inline: var(--padding-desktop-inline);
+    // For some reason iOS ignores the padding-online on this section only
+    // So have to do this the old-fashioned way
+    padding-left: var(--padding-desktop-inline);
+    padding-right: var(--padding-desktop-inline);
   }
 
   @include g.breakpoint-up(very-large) {
@@ -24,7 +37,7 @@
   }
 
   &__image {
-    padding-inline: var(--padding-mobile-inline);
+    //padding-inline: var(--padding-mobile-inline);
     margin-block-end: 3em;
 
     @include g.breakpoint-up(very-large) {
@@ -34,7 +47,7 @@
   }
 
   &__text {
-    padding-inline: var(--padding-mobile-inline);
+    //padding-inline: var(--padding-mobile-inline);
     background-color: var(--white);
     max-width: 60ch;
 
