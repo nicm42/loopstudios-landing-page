@@ -24,14 +24,14 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot](screenshot-desktop.jpg)
+![Screenshot](screenshot-desktop.png)
 
-![Screenshot](screenshot-mobile.jpg)
+![Screenshot](screenshot-mobile.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/scss-typescript-snowpack--bhbzMqa1](https://www.frontendmentor.io/solutions/scss-typescript-snowpack--bhbzMqa1)
+- Live Site URL: [https://loopstudios-landing-page-nicm42.vercel.app/](https://loopstudios-landing-page-nicm42.vercel.app/)
 
 ## My process
 
