@@ -4,6 +4,7 @@
   display: grid;
   grid-template-rows: auto 1fr;
   height: 100vh;
+  min-height: 32em; // So it will always have space for the text
   padding: 2.5em var(--padding-mobile-inline);
   background-image: url(../../../public/image-hero-mobile.jpg);
   background-size: cover;
@@ -36,7 +37,7 @@
   &__menu {
     display: none;
 
-    @include g.breakpoint-down(medium) {
+    @include g.breakpoint-down(large) {
       display: block;
       background-color: transparent;
       border: none;
@@ -46,12 +47,13 @@
 
   // Menu is desktop first, as otherwise I'd have to unset all of this
   &__nav {
-    @include g.breakpoint-down(medium) {
+    @include g.breakpoint-down(large) {
       position: absolute;
       display: grid;
       align-content: center;
       width: 100vw;
       height: 100vh;
+      min-height: 20em; // So it will always have space for all the links
       // Hack so it ignores the padding
       inset-block-start: 0;
       inset-inline-start: 0;
@@ -72,8 +74,8 @@
   &__list {
     list-style-type: none;
 
-    @include g.breakpoint-down(medium) {
-      padding-inline-start: 1em;
+    @include g.breakpoint-down(large) {
+      padding-inline-start: 2.5em; // I don't know why this makes it line up and not 1.5em
     }
   }
 
@@ -85,7 +87,7 @@
       margin-inline-end: 2em;
     }
 
-    @include g.breakpoint-down(medium) {
+    @include g.breakpoint-down(large) {
       display: block;
 
       &:not(:last-of-type) {
@@ -96,6 +98,7 @@
 
   &__title {
     place-self: center;
+    margin-block: 0.25em; // To make sure it's not pushed up against the logo on small height screens
     padding: 0.76em;
     border: 2px solid var(--white);
     font-family: var(--fontFamilyHeaders);
