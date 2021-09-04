@@ -1,0 +1,120 @@
+@use '../general' as g;
+
+.header {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+  min-height: 32em; // So it will always have space for the text
+  padding: 2.5em var(--padding-mobile-inline);
+  background-image: url(../../../public/image-hero-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white);
+
+  @include g.breakpoint-up(medium) {
+    padding: 4em var(--padding-tablet-inline);
+  }
+
+  @include g.breakpoint-up(large) {
+    padding-inline: var(--padding-desktop-inline);
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    z-index: 1;
+
+    @include g.breakpoint-up(medium) {
+      height: 2rem;
+    }
+  }
+
+  &__menu {
+    display: none;
+
+    @include g.breakpoint-down(large) {
+      display: block;
+      background-color: transparent;
+      border: none;
+      z-index: 1;
+    }
+  }
+
+  // Menu is desktop first, as otherwise I'd have to unset all of this
+  &__nav {
+    @include g.breakpoint-down(large) {
+      position: absolute;
+      display: grid;
+      align-content: center;
+      width: 100vw;
+      height: 100vh;
+      min-height: 20em; // So it will always have space for all the links
+      // Hack so it ignores the padding
+      inset-block-start: 0;
+      inset-inline-start: 0;
+      background-color: var(--black);
+      font-family: var(--fontFamilyHeaders);
+      font-size: 1.5rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      transform: translateX(1000%);
+      transition: transform 500ms ease-in-out;
+
+      &.open {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+
+    @include g.breakpoint-down(large) {
+      padding-inline-start: 2.5em; // I don't know why this makes it line up and not 1.5em
+    }
+  }
+
+  &__item {
+    display: inline;
+    line-height: 2;
+
+    &:not(:last-of-type) {
+      margin-inline-end: 2em;
+    }
+
+    @include g.breakpoint-down(large) {
+      display: block;
+
+      &:not(:last-of-type) {
+        margin-inline-end: 0;
+      }
+    }
+  }
+
+  &__title {
+    place-self: center;
+    margin-block: 0.25em; // To make sure it's not pushed up against the logo on small height screens
+    padding: 0.76em;
+    border: 2px solid var(--white);
+    font-family: var(--fontFamilyHeaders);
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 0.95;
+
+    @include g.breakpoint-up(medium) {
+      padding: 0.55em;
+      font-size: 4.5rem;
+    }
+
+    @include g.breakpoint-down(small) {
+      // Make the font smaller on a really small screen
+      // so that the longest word doesn't mean it all goes off screen
+      font-size: 2rem;
+    }
+  }
+}

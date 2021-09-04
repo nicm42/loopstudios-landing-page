@@ -1,0 +1,107 @@
+@use '../general' as g;
+
+.footer {
+  display: grid;
+  grid-template-areas: 'logo' 'links' 'socials' 'copyright';
+  justify-items: center;
+  margin-block-start: 6em;
+  padding: 3.5em 3.25em;
+  background-color: var(--black);
+
+  @include g.breakpoint-up(medium) {
+    padding-inline: var(--padding-tablet-inline);
+  }
+
+  @include g.breakpoint-up(large) {
+    grid-template-areas:
+      'logo socials'
+      'links copyright';
+    gap: 1.5em;
+    padding-inline: var(--padding-desktop-inline);
+  }
+
+  &__logo {
+    grid-area: logo;
+
+    @include g.breakpoint-up(large) {
+      justify-self: start;
+    }
+  }
+
+  &__links {
+    grid-area: links;
+    margin-block-end: 0;
+    margin-block-start: 2em;
+    padding: 0;
+    text-align: center;
+
+    @include g.breakpoint-up(large) {
+      margin-block-start: 0;
+      justify-self: start;
+    }
+  }
+
+  &__link {
+    @include g.breakpoint-up(medium) {
+      display: inline;
+    }
+  }
+
+  &__link:not(:first-of-type) {
+    margin-block-start: 1em;
+
+    @include g.breakpoint-up(medium) {
+      margin-block-start: 0;
+      margin-inline-start: 2em;
+    }
+  }
+
+  &__socials {
+    grid-area: socials;
+    margin: 0;
+    margin-block-start: 3em;
+    padding: 0;
+
+    @include g.breakpoint-up(large) {
+      margin-block-start: 0;
+      justify-self: end;
+    }
+  }
+
+  &__social {
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 0.15em;
+      inset: 0;
+      inset-block-start: 2.125em;
+      background-color: var(--white);
+      transform: scaleX(0);
+      transition: transform 500ms ease-in-out;
+    }
+
+    &:hover::after {
+      transform: scaleX(100%);
+    }
+  }
+
+  &__social:not(:first-of-type) {
+    margin-inline-start: 1em;
+  }
+
+  &__copyright {
+    grid-area: copyright;
+    margin-block-start: 1em;
+    color: var(--darkGrey);
+    text-align: center;
+
+    @include g.breakpoint-up(large) {
+      margin-block-start: 0;
+      justify-self: end;
+    }
+  }
+}

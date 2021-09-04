@@ -1,0 +1,29 @@
+:root {
+  // Colours
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --darkGrey: hsl(0, 0%, 55%);
+  --veryDarkGrey: hsl(0, 0%, 41%);
+
+  // Typography
+  --fontFamilyHeaders: 'Josefin Sans', sans-serif;
+  --fontFamilyParas: 'Alata', sans-serif;
+
+  //Padding
+  //--padding-mobile-block: 2.5em;
+  --padding-mobile-inline: 1.5em;
+  --padding-tablet-inline: 4em;
+  --padding-desktop-inline: 10em;
+
+  // Gradient on grid of images
+  --background-gradient-mobile: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.25) 10%,
+    rgba(0, 0, 0, 0)
+  );
+  --background-gradient-desktop: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 30%,
+    rgba(0, 0, 0, 0.75)
+  );
+}
