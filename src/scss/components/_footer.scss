@@ -85,8 +85,7 @@
       transition: transform 500ms ease-in-out;
     }
 
-    &:hover::after,
-    &:focus::after {
+    &:hover::after {
       transform: scaleX(100%);
     }
   }
