@@ -10,6 +10,7 @@ This is a solution to the [Loopstudios landing page challenge on Frontend Mentor
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
 - [Author](#author)
 
 ## Overview
@@ -23,9 +24,9 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot](./screenshot-desktop.jpg)
+![Screenshot](screenshot-desktop.jpg)
 
-![Screenshot](./screenshot-mobile.jpg)
+![Screenshot](screenshot-mobile.jpg)
 
 ### Links
 
@@ -39,6 +40,11 @@ Users should be able to:
 - HTML
 - SCSS
 - TypeScript
+- Snowpack
+
+### What I learned
+
+Snowpack
 
 ## Author
 
