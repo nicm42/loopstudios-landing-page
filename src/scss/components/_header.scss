@@ -26,7 +26,6 @@
   }
 
   &__logo {
-    height: 1.5rem;
     z-index: 1;
 
     @include g.breakpoint-up(medium) {

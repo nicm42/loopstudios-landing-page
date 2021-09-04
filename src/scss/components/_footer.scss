@@ -22,7 +22,6 @@
 
   &__logo {
     grid-area: logo;
-    height: 1.5rem;
 
     @include g.breakpoint-up(large) {
       justify-self: start;
